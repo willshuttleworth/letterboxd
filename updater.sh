@@ -3,7 +3,7 @@
 cd ~/Downloads
 open http://letterboxd.com/data/export
 sleep 3
-unzip *-utc.zip -d ~/Desktop/letterboxd
+unzip *-utc.zip -d ~/Desktop/letterboxd/data
 mv *-utc.zip ~/.Trash
 echo A
 cd ~/Desktop/letterboxd
