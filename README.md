@@ -21,6 +21,7 @@ executable)
 
 ### possible updates
 
-* optimizing web scraping speed
+* optimizing web scraping speed(multiprocessing gave major improvement but still looking for 
+gains)
 * adding more data (director, actors, genre, etc.)
-
+* gui so less terminal is needed
