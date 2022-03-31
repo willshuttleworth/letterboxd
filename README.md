@@ -10,7 +10,7 @@ installer.sh`
 * run installer script with `./installer.sh`
 * if pandas, requests, and bs4 libraries are already installed, then only updater script needs 
 to be used. this can be done by `yes A | ./updater.sh` (again make sure that this script is 
-executable
+executable)
 * execute randomizer program with `python3 watchlist_randomizer.py`
 
 ### about
