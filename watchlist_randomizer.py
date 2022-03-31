@@ -3,7 +3,7 @@ import pandas as pd
 
 list = pd.read_csv("data/updated_watchlist.csv")
 
-max = int(input("max runtime? "))
+max = int(input("max runtime? (mins): "))
 
 runtime_filter = list['Runtime'] < max
 filter_list = list[runtime_filter]
