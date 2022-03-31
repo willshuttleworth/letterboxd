@@ -14,7 +14,7 @@ only_class = ss(class_="text-link text-footer")
 
 for link in list['Letterboxd URI']:
     response = requests.get(link)
-    soup = bs(response.text, 'html.parser', parse_only=only_p)
+    soup = bs(response.text, 'html.parser')
     data = soup.find("p", class_="text-link text-footer")
     data = str(data)
     runtimes.append(int(data[45:48]))
