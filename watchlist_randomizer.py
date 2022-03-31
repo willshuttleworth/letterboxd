@@ -16,3 +16,5 @@ for x in range(len(choices)):
     
     print(str(x + 1) + ".", filter_list.iat[choices[x], 2])
 
+print("avg runtime of your watchlist:", round(list['Runtime'].mean()))
+print("avg release date:", round(list['Year'].mean()))
