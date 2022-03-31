@@ -1,27 +1,39 @@
 import pandas as pd 
 import requests
 from bs4 import BeautifulSoup as bs
-from bs4 import SoupStrainer as ss
 import time
+from multiprocess import Pool
 
 start = time.time()
+all_urls = list()
+responses = list()
+def link_setter():
+    watchlist = pd.read_csv("data/watchlist.csv")
+    for link in watchlist['Letterboxd URI']:
+        all_urls.append(link)
 
-list = pd.read_csv("data/watchlist.csv")
+def scrape(url):
+    response = requests.get(url)
+    return response.text
+
+link_setter()
+
+p = Pool(10)
+responses = p.map(scrape, all_urls)
+p.terminate()
+p.join()
+
 runtimes = []
-
-only_p = ss('p')
-only_class = ss(class_="text-link text-footer")
-
-for link in list['Letterboxd URI']:
-    response = requests.get(link)
-    soup = bs(response.text, 'html.parser')
+for response in responses:
+    soup = bs(response, 'html.parser')
     data = soup.find("p", class_="text-link text-footer")
     data = str(data)
     runtimes.append(int(data[45:48]))
 
-list['Runtime'] = runtimes
+watchlist = pd.read_csv("data/watchlist.csv")
+watchlist['Runtime'] = runtimes
 
-list.to_csv("data/updated_watchlist.csv")
+watchlist.to_csv("data/updated_watchlist.csv")
 
 end = time.time()
 
