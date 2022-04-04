@@ -2,7 +2,7 @@
 
 cd ~/Downloads
 open http://letterboxd.com/data/export
-sleep 3
+sleep 10
 unzip *-utc.zip -d ~/Desktop/watchlist_randomizer/data
 mv *-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
