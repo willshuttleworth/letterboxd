@@ -6,7 +6,7 @@ pip install requests
 pip install pandas
 pip install bs4
 echo packages installed
-cd ~/Desktop/watchlist_randomizer
+cd ~/Desktop/watchlist-randomizer
 chmod +x updater.sh
 yes A | ./updater.sh
 
