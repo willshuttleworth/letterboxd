@@ -7,6 +7,7 @@ from multiprocess import Pool
 start = time.time()
 all_urls = list()
 responses = list()
+
 def link_setter():
     watchlist = pd.read_csv("data/watchlist.csv")
     for link in watchlist['Letterboxd URI']:
@@ -18,7 +19,7 @@ def scrape(url):
 
 link_setter()
 
-p = Pool(10)
+p = Pool(50)
 responses = p.map(scrape, all_urls)
 p.terminate()
 p.join()

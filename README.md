@@ -1,5 +1,9 @@
 # letterboxd watchlist randomzier
 
+## ***THIS IS INTENDED FOR MAC. SCRIPTS COULD BE MODIFIED TO WORK ON LINUX. PYTHON PROGRAMS 
+COULD BE EXECUTED AS LONG AS PYTHON AND REQUIRED LIBRARIES ARE INSTALLED. HOWEVER NECESSARY 
+FILES MAY NOT BE CORRECTLY DOWNLOADED WITHOUT SCRIPTS***
+
 ### how to use
 
 * make sure python3, and pandas, requests, and bs4 python libraries are all installed
