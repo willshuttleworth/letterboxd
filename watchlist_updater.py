@@ -1,3 +1,4 @@
+import re
 import pandas as pd 
 import requests
 from bs4 import BeautifulSoup as bs
@@ -29,7 +30,12 @@ for response in responses:
     soup = bs(response, 'html.parser')
     data = soup.find("p", class_="text-link text-footer")
     data = str(data)
-    runtimes.append(int(data[45:48]))
+    data = data[0:75]
+    data = re.sub("[^0-9]", "", data)
+    if data:
+        runtimes.append(int(data))
+    else:
+        runtimes.append(-1)
 
 watchlist = pd.read_csv("data/watchlist.csv")
 watchlist['Runtime'] = runtimes
