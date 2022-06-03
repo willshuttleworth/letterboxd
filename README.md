@@ -1,10 +1,10 @@
 # letterboxd watchlist randomzier
 
-***THIS IS INTENDED FOR MAC. SCRIPTS COULD BE MODIFIED TO WORK ON LINUX. PYTHON PROGRAMS COULD BE EXECUTED AS LONG AS PYTHON AND REQUIRED LIBRARIES ARE INSTALLED. HOWEVER NECESSARY FILES MAY NOT BE CORRECTLY DOWNLOADED WITHOUT SCRIPTS***
+***THIS REALLY ONLY WORKS FOR MAC, I AM SORRY. PYTHON SCRIPTS WORK FINE AS LONG AS CORRECT LIBRARIES ARE INSTALLED, BUT FILE PATHS MAY NEED TO BE MODIFIED BASED ON HOW YOU DOWNLOAD YOUR LETTERBOXD DATA***
 
 ### how to use
 
-* make sure python3, and pandas, requests, and bs4 python libraries are all installed
+* make sure python3, pandas, requests, and bs4 python libraries are all installed
 * you are signed into your letterboxd account
 * move this repository to the desktop
 * navigate into repository and make sure installer script is executable with `chmod +x 
