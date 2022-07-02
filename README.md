@@ -2,7 +2,7 @@
 
 ***THIS REALLY ONLY WORKS FOR MAC, I AM SORRY. PYTHON SCRIPTS WORK FINE AS LONG AS CORRECT LIBRARIES ARE INSTALLED, BUT FILE PATHS MAY NEED TO BE MODIFIED BASED ON HOW YOU DOWNLOAD YOUR LETTERBOXD DATA***
 
-## yes, if you view your watchlist on letterboxd there is a shuffle button. i do not care. this is more fun
+***yes, if you view your watchlist on letterboxd there is a shuffle button. i do not care. this is more fun***
 
 ### how to use
 
