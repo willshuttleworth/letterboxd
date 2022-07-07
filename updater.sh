@@ -2,7 +2,7 @@
 
 cd ~/Downloads
 open http://letterboxd.com/data/export
-sleep 10
+# data directory does not exist yet, change script so it is made
 unzip *-utc.zip -d ~/Desktop/watchlist-randomizer/data
 mv *-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
