@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-cd ~/Desktop
 REPOPATH=$(find ~ -type d -name "watchlist-randomizer")
 # create data subfolder in repo
 cd $REPOPATH
@@ -14,9 +13,7 @@ REPOPATH="$REPOPATH/data"
 
 # download .zip from letterboxd
 cd ~/Downloads
-cd ~/Downloads
 open http://letterboxd.com/data/export
-# data directory does not exist yet, change script so it is made
 unzip *-utc.zip -d $REPOPATH
 mv *-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
