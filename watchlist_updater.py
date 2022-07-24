@@ -20,7 +20,7 @@ def scrape(url):
 
 link_setter()
 
-p = Pool(50)
+p = Pool(10)
 responses = p.map(scrape, all_urls)
 p.terminate()
 p.join()
