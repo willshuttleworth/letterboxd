@@ -19,6 +19,6 @@ unzip *-utc.zip -d $REPOPATH
 mv *-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
 cd $REPOPATH && cd ..
-python3 watchlist_updater.py
-python3 watchlist_randomizer.py
+python3 python/watchlist_updater.py
+python3 python/watchlist_randomizer.py
 
