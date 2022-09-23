@@ -44,5 +44,5 @@ watchlist.to_csv("data/updated_watchlist.csv")
 
 end = time.time()
 
-print(end - start, "seconds")
+print(round(end - start, 1), "seconds")
 print("watchlist updated with runtimes")

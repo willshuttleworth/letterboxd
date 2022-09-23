@@ -8,13 +8,8 @@
 
 * make sure python3, pandas, requests, and bs4 python libraries are all installed
 * you are signed into your letterboxd account
-* move this repository to the desktop
-* navigate into repository and make sure installer script is executable with `chmod +x 
-installer.sh`
-* run installer script with `./installer.sh`
 * if pandas, requests, and bs4 libraries are already installed, then only updater script needs 
-to be used. this can be done by `./updater.sh` (again make sure that this script is 
-executable)
+to be used. this can be done by `./updater.sh` (use `chmod +x updater.sh` to make sure script is executable)
 * execute randomizer program with `python3 watchlist_randomizer.py`
 
 ##### troubleshooting note

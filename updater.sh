@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+echo "finding where repo is located"
 REPOPATH=$(find ~ -type d -name "watchlist-randomizer")
 # create data subfolder in repo
 cd $REPOPATH
@@ -19,5 +20,5 @@ mv *-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
 cd $REPOPATH && cd ..
 python3 watchlist_updater.py
-
+python3 watchlist_randomizer.py
 
