@@ -11,6 +11,7 @@ else
         mkdir data
 fi
 REPOPATH="$REPOPATH/data"
+echo $REPOPATH
 
 # download .zip from letterboxd
 cd ~/Downloads
