@@ -17,10 +17,10 @@
 beautiful soup web scraping is used to retrieve the runtime of each movie in your watchlist
 * done in parallel using `multiprocess` library
 
-##### notes
+### notes
 
 * scripts are macos specific but could be easily modified for other unix systems
-* i recently added multiprocessing, which creates issues for mac users. to avoid this, you need to add `OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES` to your `zshrc`. 
+* i recently added multiprocessing, which creates issues for mac users. to avoid this, you need to add `OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES` to your `.zshrc`. 
     * if the problems persists, try reading 
 [this](https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr) stack overflow post.
 
