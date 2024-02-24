@@ -1,36 +1,32 @@
 # letterboxd watchlist randomzier
 
-***this works only on mac. with small modifications could work on linux***
+### requirements
 
-***yes, if you view your watchlist on letterboxd there is a shuffle button. i do not care. this is more fun***
+* python3
+* libraries: pandas, requests, bs4, multiprocess
 
-### how to use
+### usage
 
-* make sure python3, pandas, requests, and bs4 python libraries are all installed
-* you are signed into your letterboxd account
-* if pandas, requests, and bs4 libraries are already installed, then only updater script needs 
-to be used. this can be done by `./updater.sh` (use `chmod +x updater.sh` to make sure script is executable)
-* execute randomizer program with `python3 python/watchlist_randomizer.py`
+* run the `updater.sh` script to download the newest version of your watchlist and randomize it
+* `python3 update.py`: run webscraper to update the runtimes of all movies in your watchlist
+* `python3 randomize.py`: pick a random movie from your watchlist
 
-##### troubleshooting note
-
-* i recently added multiprocessing, which creates issues for mac users. to avoid this, you 
-need to edit the environment so it is not blocked or whatever is happening. to do this, open 
-the terminal and type `nano .zshrc` and into the file paste `export 
-OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES`. then save and go back to terminal and type `source 
-~/.zshrc` close and reopen terminal and multiprocessing with python should now be allowed. if 
-the problems persists, try reading 
-[this](https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr) 
-stack overflow article.
 
 ### about
 
-* just some fun with letterboxd data
-* script downloads newest version of watchlist and use web scraping to add runtime to each film
-* randomizer takes random sample of user's size choice and under runtime user specifies
+beautiful soup web scraping is used to retrieve the runtime of each movie in your watchlist
+* done in parallel using `multiprocess` library
+
+##### notes
+
+* scripts are macos specific but could be easily modified for other unix systems
+* i recently added multiprocessing, which creates issues for mac users. to avoid this, you need to add `OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES` to your `zshrc`. 
+    * if the problems persists, try reading 
+[this](https://stackoverflow.com/questions/50168647/multiprocessing-causes-python-to-crash-and-gives-an-error-may-have-been-in-progr) stack overflow post.
 
 ### possible updates
 
 * optimizing web scraping speed(multiprocessing gave major improvement but still looking for 
 gains)
 * adding more data (director, actors, genre, etc.)
+

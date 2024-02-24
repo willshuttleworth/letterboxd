@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup as bs
 import time
 from multiprocess import Pool
 
-start = time.time()
 all_urls = list()
 responses = list()
 
@@ -42,7 +41,4 @@ watchlist['Runtime'] = runtimes
 
 watchlist.to_csv("data/updated_watchlist.csv")
 
-end = time.time()
-
-print(round(end - start, 1), "seconds")
 print("watchlist updated with runtimes")

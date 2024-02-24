@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-echo "finding where repo is located"
-REPOPATH=$(find ~ -type d -name "watchlist-randomizer")
+REPOPATH=$PWD
+
 # create data subfolder in repo
 cd $REPOPATH
 if [ ! -d data ]; then
@@ -10,16 +10,14 @@ else
         rm -r data
         mkdir data
 fi
-REPOPATH="$REPOPATH/data"
-echo $REPOPATH
 
 # download .zip from letterboxd
 cd ~/Downloads
 open http://letterboxd.com/data/export
-unzip *-utc.zip -d $REPOPATH
-mv *-utc.zip ~/.Trash
+unzip letterboxd-*-utc.zip -d $REPOPATH/data
+mv letterboxd-*-utc.zip ~/.Trash
 echo "updating watchlist with runtimes"
-cd $REPOPATH && cd ..
+cd $REPOPATH 
 python3 python/watchlist_updater.py
 python3 python/watchlist_randomizer.py
 
