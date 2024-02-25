@@ -11,6 +11,6 @@ print(len(filter_list), "options under", max, "mins")
 num_choices = int(input("how many options? "))
 
 choices = random.sample(range(len(filter_list)), num_choices)
+
 for x in range(len(choices)):
-    
     print(str(x + 1) + ".", filter_list.iat[choices[x], 2])

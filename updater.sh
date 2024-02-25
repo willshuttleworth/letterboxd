@@ -11,13 +11,15 @@ else
         mkdir data
 fi
 
-# download .zip from letterboxd
+# download data from letterboxd
 cd ~/Downloads
 open http://letterboxd.com/data/export
 unzip letterboxd-*-utc.zip -d $REPOPATH/data
 mv letterboxd-*-utc.zip ~/.Trash
+
+# update runtimes and randomize
 echo "updating watchlist with runtimes"
 cd $REPOPATH 
-python3 python/watchlist_updater.py
-python3 python/watchlist_randomizer.py
+python3 update.py
+python3 randomize.py
 
